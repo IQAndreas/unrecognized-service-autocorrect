@@ -13,6 +13,6 @@ for command in "${commands[@]}"; do
 	# Will not overwrite the command if it already exists.
 	# Who knows, maybe some day someone will create a service named 'restart'?
 	if [ ! -e "$command" ]; then
-		ln "/usr/bin/unrecognized-service-autocorrect" "/etc/init.d/$command"
+		ln -s "/usr/bin/unrecognized-service-autocorrect" "/etc/init.d/$command"
 	fi
 done
