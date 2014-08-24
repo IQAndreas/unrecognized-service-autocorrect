@@ -1,0 +1,12 @@
+#!/bin/sh
+# Tries to detect if the user has "flipped" the arguments for the 'service' command, e.g.
+#	$ sudo service restart apache2
+service=$(basename $0)
+command=$1
+echo "$service: unrecognized service"
+
+# Only recommend and run the command if it actually exists
+if [ -e "/etc/init.d/$command" ]; then
+	echo "You probably meant 'service $command $service'"
+	service "$command" "$service"
+fi
