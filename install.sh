@@ -35,7 +35,7 @@ chmod +x "$target_bin" || exit 1;
 for command in "${commands[@]}"; do
 	# Will not overwrite the command if it already exists.
 	# Who knows, maybe some day someone will create a service named 'restart'?
-	if [ ! -e "$command" ]; then
+	if [ ! -e "/etc/init.d/$command" ]; then
 		ln -s "$target_bin" "/etc/init.d/$command"
 	fi
 done
