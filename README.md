@@ -40,4 +40,4 @@ The installation will add the shell script `/usr/bin/unrecognized-service-autoco
 
 The script will not overwrite any existing services found in that directory (who knows, maybe there will one day be a service out there named `restart`?)
 
-The installation script (as well as any other files found in this repository) can then safely be removed from your system.
+To uninstall the library again, run the `install.sh` script with the `--uninstall` flag.
