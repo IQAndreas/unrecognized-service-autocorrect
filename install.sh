@@ -6,9 +6,11 @@ if [ "$#" -lt 1 ] || [ "$1" == '--warn' ]; then
 	source_bin='unrecognized-service-autocorrect-warn'
 elif [ "$1" == '--force' ]; then
 	source_bin='unrecognized-service-autocorrect-force'
+elif [ "$1" == '--help' ]; then	
+	echo "Valid parameters are '--warn' or '--force', or '--help' to display this message."
 else
 	echo "Unknown argument '$1'."
-	echo "Valid parameters are '--warn' or '--force'".
+	echo "Valid parameters are '--warn', '--force', or '--help'."
 	exit 1;
 fi
 
